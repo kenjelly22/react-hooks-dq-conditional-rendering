@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react"
 
-function MenuBar(props) {
+function MenuBar({setSelectedTab, selectedTab}) {
   /*
 
   The 'span' tags below are the menu items. Think about the way a menu 
@@ -14,23 +14,35 @@ function MenuBar(props) {
 
   return (
     <div className="ui four item menu">
-      <span className="item active">
+      <span
+        onClick={() => setSelectedTab("profile")}
+        className={selectedTab === "profile" ? "item active" : "item"}
+      >
         <i className="user large icon" />
       </span>
 
-      <span className="item">
+      <span
+        onClick={() => setSelectedTab("photos")}
+        className={selectedTab === "photos" ? "item active" : "item"}
+      >
         <i className="photo large icon" />
       </span>
 
-      <span className="item">
+      <span
+        onClick={() => setSelectedTab("cocktails")}
+        className={selectedTab === "cocktails" ? "item active" : "item"}
+      >
         <i className="cocktail large icon" />
       </span>
 
-      <span className="item">
+      <span
+        onClick={() => setSelectedTab("pokemon")}
+        className={selectedTab === "pokemon" ? "item active" : "item"}
+      >
         <i className=" themeisle large icon" />
       </span>
     </div>
-  );
+  )
 }
 
-export default MenuBar;
+export default MenuBar
