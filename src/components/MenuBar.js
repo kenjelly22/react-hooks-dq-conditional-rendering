@@ -12,6 +12,43 @@ function MenuBar({setSelectedTab, selectedTab}) {
 
   */
 
+  // ####################################################################
+  // ALTERNATE WAY:
+
+  // import React from "react"
+
+  // function MenuBar({ selectedTab, setSelectedTab }) {
+  //   /*
+
+  //   The 'span' tags below are the menu items. Think about the way a menu
+  //   should work. When you click a menu item, the button typically becomes
+  //   'active' to indicate that it is currently selected. How could we achieve
+  //   this programatically? What other behavior do we expect when we click
+  //   on a menu item? Do we need state in this component, and if not, how can
+  //   this component be made aware of what is currently the active menu item?
+
+  //   */
+
+  //   const icons = ["user", "photo", "cocktail", "themeisle"]
+
+  //   return (
+  //     <div className="ui four item menu">
+  //       {icons.map((icon) => (
+  //         <span
+  //           onClick={() => setSelectedTab(icon)}
+  //           className={`item ${selectedTab === icon ? "active" : ""}`}
+  //         >
+  //           <i className={`${icon} large icon`} />
+  //         </span>
+  //       ))}
+  //     </div>
+  //   )
+  // }
+
+  // export default MenuBar
+
+  // ####################################################################
+
   return (
     <div className="ui four item menu">
       <span
